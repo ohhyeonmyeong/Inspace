@@ -436,7 +436,7 @@ header .dark .wrap nav ul li:hover a{color: #f80;}
 #content .deco .dark .wrap #About .cont_part .cont .Img_cont{
     width: 100%;
     height: 220px;
-    background-color: #fff;
+    /* background-color: #fff; */
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -567,3 +567,63 @@ footer .wrap{
 }
 
 footer .wrap p{font-size: 16px; color: #373735;}
+
+.popup_dark{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+}
+
+.popup_dark.active{z-index: 1; opacity: 1; transition: opacity 0.7s;}
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 480px;
+    height: 480px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.popup.active{z-index: 1; opacity: 1; transition: opacity 0.7s;}
+
+.popup .close{
+    position: absolute;
+    top: -40px;
+    right: -20px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.popup .Img_space{width: 100%; height: 100%;}
+.popup .Img_space .Img{
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../img/tab_exterior/exterior_01.jpg);
+}
+
+.popup .Img_space .Img h3{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background-color: rgba(255,127,0,0.8);
+    width: calc(100% - 40px);
+    line-height: 48px;
+    text-align: right;
+    padding: 0 20px;
+    font-size: 22px;
+}
+
